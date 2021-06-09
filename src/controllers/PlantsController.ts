@@ -31,6 +31,8 @@ export default {
       about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.",
       water_tips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.",
       photo: "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/1.svg",
+      frenquency: "week",
+      frequency_times: "2"
     }
     return response.json(plants);
   },
