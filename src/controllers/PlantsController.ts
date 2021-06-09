@@ -15,15 +15,24 @@ interface CustomRequestProps extends Request{
 export default {
 
   async show(request: Request, response: Response) {
-    const { id } = request.params;
+    //const { id } = request.params;
 
-    const plantsRepository = getRepository(Plant);
+    //const plantsRepository = getRepository(Plant);
 
-    const plant = await plantsRepository.findOneOrFail(id, {
-      relations: ['environments']
-    });
+    // const plant = await plantsRepository.findOneOrFail(id, {
+    //   relations: ['environments']
+    // });
+    
+    // return response.json(plantsView.render(plant));
 
-    return response.json(plantsView.render(plant));
+    const plants: any = {
+      id: 1,
+      name: "Aningapara",
+      about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.",
+      water_tips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.",
+      photo: "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/1.svg",
+    }
+    return response.json(plants);
   },
   
   async index(request: CustomRequestProps, response: Response) {
